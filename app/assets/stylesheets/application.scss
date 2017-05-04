@@ -8,3 +8,220 @@
 .github-fork-ribbon.right-bottom:before {
     background-color: black;
 }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin-top: 100px;
+  background: #FFFFFF;
+}
+a {
+  text-decoration: none;
+  color: #628DB6;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+a:hover {
+  color: #49739C;
+}
+
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 45px;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 15px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #49739C;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #49739C;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+
+label {
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 15px;
+}
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 5px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #49739C;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 15px;
+}
+.field-wrap em{
+  color: white;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 10px;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #49739C;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #49739C;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+.left{
+  text-align: left;
+}
+
+.line{
+  color: red;
+}
+.mail-mob{
+  color: #fff;
+}
+
+tbody a{
+  color: #C52F24;
+}
+
+tbody a:hover{
+  color: #C52F24;
+}
+table {
+  background-color: #ffffff; 
+  width: 100%; 
+}
+table th{
+  padding: 5px;
+  color: #628DB6;
+  background-color: #EEEEEE;
+  font-size: 17px;
+  height: 50px;
+  text-align: center;
+}
+.table-hover tbody tr:hover {
+  background-color: #FFFFDD;
+}
+.table-hover thead th:hover {
+  color: #CF1A1A
+}
+table td{
+  padding: 10px;  
+  text-align: center;
+}

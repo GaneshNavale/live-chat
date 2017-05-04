@@ -1,0 +1,44 @@
+.form
+  = link_to "Back", :back
+  .kasali Edit Profile
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    = devise_error_messages!
+    .top-row
+      .field-wrap
+        label First Name
+        span.req *
+        = f.text_field :first_name, autofocus: true
+      .field-wrap
+        label Last Name
+        span.req *
+        = f.text_field :last_name, autofocus: true
+    .field-wrap  
+      label User Name
+      span.req * 
+      = f.text_field :username   
+    .field-wrap
+      = f.label :email
+      br
+      = f.email_field :email, autofocus: true
+    .field-wrap
+      label Mobile
+      = f.text_field :mobile, autofocus: true
+    .field-wrap
+      = f.label :password, 'New Password'
+      i (leave blank if you do not want to change it)
+      br
+      = f.password_field :password, autocomplete: "off"
+      - if @minimum_password_length
+        em 
+          = "#{@minimum_password_length} characters minimum"
+    .field-wrap
+      = f.label :password_confirmation
+      br
+      = f.password_field :password_confirmation, autocomplete: "off"
+
+    .field-wrap
+      = f.label :current_password, 'Current Password'
+      = f.password_field :current_password, autocomplete: "off"
+    br
+    .actions
+      = f.submit 'Update', class: 'button button-block'
