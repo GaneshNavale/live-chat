@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: chatty_production
-  username: chatty
-  password: <%= ENV['CHATTY_DATABASE_PASSWORD'] %>
+  username: ganesh
+  password: root
