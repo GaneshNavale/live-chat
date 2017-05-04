@@ -84,6 +84,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
+  config.action_cable.allowed_request_origins = ['https://live-chat-gnavale.herokuapp.com', 'http://live-chat-gnavale.herokuapp.com']
+  # config.action_cable.allowed_request_origins = ['https://localhost:3000', 'http://localhost:3000']
+  Rails.application.config.action_cable.disable_request_forgery_protection = true
 
 end
