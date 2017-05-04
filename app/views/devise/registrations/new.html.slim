@@ -1,0 +1,42 @@
+.form  
+  ul.tab-group
+    li.signup.tab.active
+      = link_to "Sign Up", new_user_registration_path
+    li.login.tab
+      = link_to "Sign In", new_user_session_path
+  #login  
+    h1 Sign Up for Free
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .top-row
+        .field-wrap
+          label First Name
+          span.req *
+          = f.text_field :first_name, autofocus: true
+        .field-wrap
+          label Last Name
+          span.req *
+          = f.text_field :last_name, autofocus: true 
+      .field-wrap  
+        label User Name
+        span.req * 
+        = f.text_field :username
+      .field-wrap
+        label Email Address
+        span.req *        
+        = f.email_field :email, autofocus: true
+
+      .field-wrap.req
+        label Mobile *
+        = f.text_field :mobile, autofocus: true
+    
+      .field-wrap
+        label Password
+        span.req *
+        = f.password_field :password, autocomplete: "off"
+      .field-wrap
+        label Password Confirmation
+        span.req *
+        = f.password_field :password_confirmation, autocomplete: "off"
+      .actions
+        = f.submit 'Sign Up', class: "button button-block"
+= render "devise/shared/links"

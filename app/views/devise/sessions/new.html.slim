@@ -1,0 +1,25 @@
+.form  
+  ul.tab-group
+    li.signup.tab
+      = link_to "Sign Up", new_user_registration_path
+    li.login.tab.active
+      = link_to "Sign In", new_user_session_path
+  #login
+    h1 Welcome Back!
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field-wrap
+        .row
+          .col-sm-6
+            label User Name
+          .col-sm-12
+            = f.text_field :username, autofocus: true
+      .field-wrap
+        .row
+          .col-sm-6
+            label Password
+          .col-sm-12
+            = f.password_field :password, autocomplete: 'off'
+      p.forgot
+        = link_to "Forgot your password?", new_password_path(resource_name)
+      .actions
+        = f.submit "Log in", class: "button button-block"
