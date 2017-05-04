@@ -8,6 +8,7 @@ gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma'
+gem 'slim'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -21,7 +22,7 @@ gem 'jbuilder', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 
-
+gem 'devise'
 
 
 group :production do 
