@@ -2,8 +2,9 @@
 #  and sending/receiving messages over the WebSocket.
 
 production:
-  adapter: redis
-  url: <%=ENV['REDIS_URL']%>
+  adapter: async
+  # adapter: redis
+  # url: <%=ENV['REDIS_URL']%>
 
 development:
   adapter: async
