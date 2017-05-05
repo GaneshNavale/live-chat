@@ -5,14 +5,13 @@
     li.login.tab.active
       = link_to "Sign In", new_user_session_path
   #login
-    h1 Welcome Back!
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field-wrap
         .row
           .col-sm-6
-            label User Name
+            label Email
           .col-sm-12
-            = f.text_field :username, autofocus: true
+            = f.text_field :email, autofocus: true
       .field-wrap
         .row
           .col-sm-6
