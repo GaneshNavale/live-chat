@@ -4,8 +4,7 @@
       = link_to "Sign Up", new_user_registration_path
     li.login.tab
       = link_to "Sign In", new_user_session_path
-  #login  
-    h1 Sign Up for Free
+  #login
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       .top-row
         .field-wrap
@@ -26,7 +25,7 @@
         = f.email_field :email, autofocus: true
 
       .field-wrap.req
-        label Mobile *
+        label Mobile
         = f.text_field :mobile, autofocus: true
     
       .field-wrap
