@@ -86,5 +86,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_cable.allowed_request_origins = ['https://localhost:3000', 'http://localhost:3000', 'https://live-chat-gnavale.herokuapp.com', 'http://live-chat-gnavale.herokuapp.com']
   Rails.application.config.action_cable.disable_request_forgery_protection = true
+  config.action_mailer.default_url_options = { host: 'live-chat-gnavale.heroku.com' }
 
 end
