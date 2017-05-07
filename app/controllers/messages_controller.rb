@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast 'messages',
         message: message.content,
-        user: message.user.username
+        user: message.user.username,
+        time: message.created_at.to_s(:time)
       head :ok
     end
   end
