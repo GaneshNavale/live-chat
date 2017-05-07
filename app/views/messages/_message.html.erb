@@ -1,1 +1,9 @@
-<p><strong><%=message.user.username%>:</strong> <%=message.content%></p>
+<p id= <%=message.id%>>
+	<strong>
+		<%= message.user.username %>
+	</strong> 
+	<%=message.content%>
+	<div class='time'>
+		<%= message.created_at.to_s(:time) %>
+	</div>
+</p>

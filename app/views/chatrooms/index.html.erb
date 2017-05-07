@@ -3,15 +3,15 @@
 </div>
 
 <div class="row col-md-8 col-md-offset-2" id="chatrooms">
-  <div id="chatroom-errors">
-    
+  <div id="chatroom-errors">  
   </div>
     <ul id="chatroom-index"> 
+    </ul>
   <div class="well">
     <% if @chatrooms.any? %>
         <%= render @chatrooms%>
     <%else %>
-      </ul>
+
       <p>Be the first one to make a group!</p>
     <% end %>
   </div>
