@@ -1,0 +1,9 @@
+.form.color-white
+	- @friends.each do |friend|
+		.row
+			.col-sm-4
+				= friend.full_name
+			.col-sm-4
+				=link_to 'Send Message', personal_chatroom_path(friend.id)
+			.col-sm-4
+				=link_to 'Un friend', friend_request_path(friend.id), method: :delete

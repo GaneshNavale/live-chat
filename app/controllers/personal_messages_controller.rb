@@ -1,7 +1,7 @@
-class MessagesController < ApplicationController
+class PersonalMessagesController < ApplicationController
 
   def create
-    message = Message.new(message_params)
+    message = PersonalMessage.new(message_params)
     message.user = current_user
     if message.save
       ActionCable.server.broadcast 'messages',
@@ -15,6 +15,6 @@ class MessagesController < ApplicationController
   private
 
     def message_params
-      params.require(:message).permit(:content, :chatroom_id)
+      params.require(:personal_message).permit(:content, :chatroom_id)
     end
 end

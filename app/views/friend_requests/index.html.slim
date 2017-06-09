@@ -1,0 +1,7 @@
+.form.color-white
+	- @friend_requests.each do |fr|
+		.row
+			.col-sm-8
+				= fr.requested_by.full_name
+			.col-sm-4
+				= link_to 'Accept', accept_friend_request_path(fr.id)
