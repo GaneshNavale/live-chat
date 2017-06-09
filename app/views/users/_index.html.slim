@@ -1,0 +1,8 @@
+.form.color-white
+	- @users.each do |user|
+		.row
+			.col-sm-6= user.full_name
+			- if user.friend_request?(current_user.id)
+				.col-sm-6= 'Request sent'
+			- elsif user.id != current_user.id
+				.col-sm-6= link_to 'Send friend request', friend_requests_path(user_id: user.id), method: :post

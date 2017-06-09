@@ -1,9 +1,13 @@
 class Chatroom < ApplicationRecord
+
+  default_scope { where(chat_type: 'Group') }
+
   has_many :messages, dependent: :destroy
   has_many :users, through: :messages
-  validates :topic, presence: true, uniqueness: true, case_sensitive: false
-  before_validation :sanitize, :slugify
 
+  validates :topic, presence: true, uniqueness: true, case_sensitive: false
+  
+  before_validation :sanitize, :slugify
 
   def to_param
     self.slug
