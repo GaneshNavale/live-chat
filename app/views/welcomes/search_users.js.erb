@@ -1,0 +1,5 @@
+<% if @users.present? %>
+ $('.users').html("<%=j render :partial => 'users/index' %>");
+<% else %>
+ $('.users').html("<div class='form color-white'>No result found, please try other keywords</div>");
+<% end %>

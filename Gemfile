@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
-
+gem 'aasm'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
@@ -33,6 +33,7 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'pry'
+  gem 'awesome_print'
 end
 
 group :development do

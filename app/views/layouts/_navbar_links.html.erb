@@ -5,7 +5,20 @@
     </li>
     <li>
       <%= link_to "Groups", chatrooms_path %>
-    </li> 
+    </li>
+    <% if user_friend_requests.pending.present? %>
+      <li>
+      <%= link_to 'Friend Request', friend_requests_path%>
+      </li>
+    <% end %>
+    <% if current_user.friends.present? %>
+      <li>
+      <%= link_to 'Friends', friends_welcomes_path%>
+      </li>
+    <% end %>
+    <li class='space-10 vspace-10'>
+      <%= render 'shared/search' %>
+    </li>
   <% end %>
   
 </ul>

@@ -1,0 +1,11 @@
+.row.col-md-8.col-md-offset-2#chatroom-title
+  h1.title= 'Groups'
+
+.row.col-md-8.col-md-offset-2#chatrooms
+  #chatroom-errors
+    ul#chatroom-index
+  .well
+    - if @chatrooms.any?
+      = render @chatrooms
+    - else
+      p= "Be the first one to make a group!"
