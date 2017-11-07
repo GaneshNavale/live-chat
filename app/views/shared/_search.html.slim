@@ -1,5 +1,6 @@
 .row.color-black
 	= form_for '', url: search_users_welcomes_path, method: :get, remote: true, html: { class: 'navbar-form navbar-left', role: "search" } do |f|  
-	  .col-sm-4= f.text_field :first_name, placeholder: params[:first_name]
-	  .col-sm-4= f.text_field :last_name, placeholder: params[:last_name]
-	  .col-sm-4= f.submit 'Search', class: 'btn btn-success'
+	  .col-sm-4= f.text_field :first_name, placeholder: params[:first_name] || 'First Name'
+	  .col-sm-4= f.text_field :last_name, placeholder: params[:last_name] || 'Last Name'
+	  .col-sm-4= f.submit 'Search', class: 'btn btn-success search'      
+    </button>
