@@ -18,11 +18,11 @@
 //= require chatrooms
 // require_tree .
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 
 	$('#characters').css('color', 'green');
-	$('textarea#message_content').keyup(updateCount);
-	$('textarea#message_content').keydown(updateCount);
+	$('textarea#message_content, textarea#personal_message_content').keyup(updateCount);
+	$('textarea#message_content, textarea#personal_message_content').keydown(updateCount);
 
 	function updateCount() {
 		var max_length = 160;
