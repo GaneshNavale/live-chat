@@ -17,3 +17,25 @@
 //= require_tree ./channels
 //= require chatrooms
 // require_tree .
+
+$(document).ready(function() {
+
+	$('#characters').css('color', 'green');
+	$('textarea#message_content').keyup(updateCount);
+	$('textarea#message_content').keydown(updateCount);
+
+	function updateCount() {
+		var max_length = 160;
+		var cs = $(this).val().length;
+		var remaining_length = max_length - cs;
+	  $('#characters').text(remaining_length);
+	  if (remaining_length < 0) {
+	  	$('#characters').css('color', 'red');
+	  } else if (remaining_length < 20 && remaining_length > 0){
+	  	$('#characters').css('color', '#FFAD1F');
+	  } else {
+	  	$('#characters').css('color', 'green');
+	  }
+	}
+
+});
