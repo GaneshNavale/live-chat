@@ -16,13 +16,13 @@
   <%= render partial: 'layouts/navbar' %>
   <div class='users'>
   </div>
-  <% if notice %>
-    <p class="alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert-alert"><%= alert %></p>
-  <% end %> 
   <div class="container">
+    <% if notice %>
+      <p class="alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert-alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </div>
   </body>
